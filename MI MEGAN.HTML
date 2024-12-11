@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para MEGAN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
+            color: #d63384;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        #yes, #yes2 {
+            background-color: #ff66b2;
+            color: white;
+        }
+        #no {
+            background-color: #ffcccc;
+            color: black;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Para MEGAN</h1>
+    <p>¿Quieres ser mi novia?</p>
+    <div class="button-container">
+        <button id="yes">SI</button>
+        <button id="yes2">Sisi</button>
+        <button id="no">NOP</button>
+    </div>
+
+    <script>
+        const noButton = document.getElementById('no');
+
+        noButton.addEventListener('mouseover', () => {
+            const randomX = Math.floor(Math.random() * window.innerWidth * 0.8);
+            const randomY = Math.floor(Math.random() * window.innerHeight * 0.8);
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        });
+
+        document.getElementById('yes').addEventListener('click', () => {
+            alert('¡Sabía que dirías que sí! 💖');
+        });
+
+        document.getElementById('yes2').addEventListener('click', () => {
+            alert('¡Sabía que dirías que sí! 💖');
+        });
+    </script>
+</body>
+</html>
